@@ -63,6 +63,9 @@ TARGET_KERNEL_ADDITIONAL_FLAGS := DTC_EXT=$(shell pwd)/prebuilts/misc/$(HOST_OS)
 # Platform
 TARGET_BOARD_PLATFORM := bengal
 
+# Bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth/include
+
 # Metadata
 BOARD_USES_METADATA_PARTITION := true
 
