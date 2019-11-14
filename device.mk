@@ -17,6 +17,9 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
+# Partitions
+PRODUCT_USE_DYNAMIC_PARTITIONS := true
+
 # HIDL
 PRODUCT_PACKAGES += \
     android.hidl.base@1.0 \
