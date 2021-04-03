@@ -35,14 +35,14 @@
 # specify MF_CHECK, and must come before any filesystems that do specify MF_CHECK
 
 #<src>                                                 <mnt_point>            <type>  <mnt_flags and options>                            <fs_mgr_flags>
-system                                                  /system                  ext4    ro,barrier=1,discard                                 wait,logical,first_stage_mount
+system                                                  /system                  ext4    ro,barrier=1,discard                                 wait,logical,first_stage_mount,readahead_size_kb=128
 system_ext                                              /system_ext              ext4    ro,barrier=1,discard                                 wait,logical,first_stage_mount
 product                                                 /product                 ext4    ro,barrier=1,discard                                 wait,logical,first_stage_mount
 vendor                                                  /vendor                  ext4    ro,barrier=1,discard                                 wait,logical,first_stage_mount
 /dev/block/bootdevice/by-name/cache                     /cache                   ext4    nosuid,noatime,nodev,barrier=1                       wait
 /dev/block/by-name/metadata                             /metadata                ext4    noatime,nosuid,nodev,discard                         wait,formattable,wrappedkey,first_stage_mount
 # Add fs_mgr flag - sysfs_path=/sys/devices/platform/soc/xxxx.[ufshc|sdhci] to userdata entry, based on UFS|eMMC device.
-/dev/block/bootdevice/by-name/userdata                  /data                    f2fs    noatime,nosuid,nodev,discard,reserve_root=32768,resgid=1065,fsync_mode=nobarrier,inlinecrypt     latemount,wait,check,formattable,fileencryption=ice,wrappedkey,quota,reservedsize=128M,checkpoint=fs
+/dev/block/bootdevice/by-name/userdata                  /data                    f2fs    noatime,nosuid,nodev,discard,reserve_root=32768,resgid=1065,fsync_mode=nobarrier,inlinecrypt     latemount,wait,check,formattable,fileencryption=ice,wrappedkey,quota,reservedsize=128M,checkpoint=fs,readahead_size_kb=128
 /dev/block/bootdevice/by-name/persist                   /mnt/vendor/persist    ext4    noatime,nosuid,nodev,barrier=1                       wait,check
 /dev/block/bootdevice/by-name/misc                      /misc                  emmc    defaults                                             defaults
 /devices/platform/soc/4784000.sdhci/mmc_host*           /storage/sdcard1       vfat    nosuid,nodev                                         wait,voldmanaged=sdcard1:auto,encryptable=footer
