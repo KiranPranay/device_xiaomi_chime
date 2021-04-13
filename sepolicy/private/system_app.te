@@ -1,0 +1,4 @@
+allow system_app vendor_default_prop:file { getattr open read };
+allow system_app vendor_default_prop:file {map};
+allow system_app sysfs_kgsl:file r_file_perms;
+get_prop(system_app, vendor_camera_prop);

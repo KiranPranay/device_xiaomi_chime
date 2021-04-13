@@ -131,7 +131,8 @@ TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 TARGET_USERIMAGES_USE_F2FS := true
 
 # Sepolicy
-TARGET_USES_PREBUILT_VENDOR_SEPOLICY := true
+include device/qcom/sepolicy/SEPolicy.mk
+BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/private
 
 # Treble
 BOARD_VNDK_VERSION := current
