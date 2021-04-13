@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="config_twoDigitNumberPattern">
+        <item>@null</item>
+        <item>00</item>
+        <item>*2</item>
+    </array>
+</resources>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    coreApp="true"
+    package="com.android.server.telecom.overlay.common"
+    android:versionCode="30"
+    android:versionName="11">
+    <overlay
+      android:targetPackage="com.android.server.telecom"
+      android:isStatic="true"/>
+</manifest>

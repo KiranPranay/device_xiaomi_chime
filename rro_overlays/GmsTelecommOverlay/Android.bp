@@ -1,0 +1,6 @@
+runtime_resource_overlay {
+    name: "GmsTelecommOverlay",
+    theme: "GmsTelecommOverlay",
+    sdk_version: "current",
+    product_specific: true
+}

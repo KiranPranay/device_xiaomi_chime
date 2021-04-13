@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="config_screenBrightnessDim">13</integer>
+    <integer name="config_screenBrightnessDoze">17</integer>
+    <integer name="config_shutdownBatteryTemperature">600</integer>
+</resources>

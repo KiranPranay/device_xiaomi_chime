@@ -1,0 +1,6 @@
+runtime_resource_overlay {
+    name: "FrameworksResCommon",
+    theme: "FrameworksResCommon",
+    sdk_version: "current",
+    product_specific: true
+}
