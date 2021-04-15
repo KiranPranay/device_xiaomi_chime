@@ -54,6 +54,13 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     Snap
 
+# Display
+PRODUCT_PACKAGES += \
+    libdisplayconfig \
+    libqdMetaData \
+    libqdMetaData.system \
+    libvulkan
+
 # Fastbootd
 PRODUCT_PACKAGES += \
     fastbootd
