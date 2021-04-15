@@ -35,6 +35,21 @@ PRODUCT_PACKAGES += \
     com.dsi.ant.antradio_library \
     com.dsi.ant@1.0
 
+# Audio
+PRODUCT_PACKAGES += \
+    android.hardware.audio@6.0-impl \
+    android.hardware.audio.effect@6.0-impl \
+    android.hardware.audio.service \
+    vendor.qti.hardware.audiohalext@1.0 \
+    vendor.qti.hardware.audiohalext-utils
+
+PRODUCT_PACKAGES += \
+    audio.a2dp.default
+
+PRODUCT_PACKAGES += \
+    tinymix \
+    libaudio-resampler
+
 # Camera
 PRODUCT_PACKAGES += \
     Snap
