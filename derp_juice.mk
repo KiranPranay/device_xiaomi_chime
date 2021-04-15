@@ -11,6 +11,9 @@ WITH_GAPPS := true
 $(call inherit-product, vendor/derp/config/common_full_phone.mk)
 TARGET_GAPPS_ARCH := arm64
 
+# Build Official-ly
+DERP_BUILDTYPE := Official
+
 # Device identifier. This must come after all inclusions.
 PRODUCT_NAME := derp_juice
 PRODUCT_DEVICE := juice
