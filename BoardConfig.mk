@@ -155,6 +155,8 @@ BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/private
 # Treble
 BOARD_VNDK_VERSION := current
 
+# UEFI
+TARGET_USES_UEFI := true
 
 # Verified Boot
 BOARD_AVB_ENABLE := true
