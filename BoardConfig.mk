@@ -142,6 +142,9 @@ TARGET_COPY_OUT_PRODUCT := product
 
 BUILD_WITHOUT_VENDOR := true
 
+# Power
+TARGET_USES_INTERACTION_BOOST := true
+
 # Platform
 TARGET_BOARD_PLATFORM_GPU := qcom-adreno610
 
