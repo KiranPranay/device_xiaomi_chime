@@ -251,7 +251,6 @@ service closead /system/vendor/bin/displayf_bin s 0
 service displayfeature /system/bin/displayfeature
     class hal
     user root
-    interface vendor.xiaomi.hardware.displayfeature@1.0::IDisplayFeature default
     group system root
     oneshot
 
