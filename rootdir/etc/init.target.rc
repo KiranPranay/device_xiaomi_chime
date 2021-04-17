@@ -97,6 +97,10 @@ on boot
 #xiong jiangxueqin To realize the communication between framework and thermal, we need to implement sys node in kernel
    chown system system /sys/class/thermal/thermal_message/sconfig
 
+# Touchpanel
+    chown system system /sys/touchpanel/double_tap
+    chmod 0664 /sys/touchpanel/double_tap
+
 #USB controller configuration
     setprop vendor.usb.rndis.func.name "gsi"
     setprop vendor.usb.rmnet.func.name "gsi"
