@@ -8,4 +8,14 @@ PRODUCT_PRODUCT_PROPERTIES += \
 
 # Bluetooth
 PRODUCT_PRODUCT_PROPERTIES += \
-    ro.bluetooth.library_name=libbluetooth.so 
+    ro.bluetooth.library_name=libbluetooth.so
+
+# Always use GPU for screen compositing
+PRODUCT_PROPERTY_OVERRIDES += \
+    debug.sf.disable_hwc_overlays=1
+
+# Graphics
+PRODUCT_PRODUCT_PROPERTIES += \
+    debug.hwui.renderer=skiavk \
+    ro.surface_flinger.max_frame_buffer_acquired_buffers=3 \
+    debug.sf.latch_unsignaled=0
