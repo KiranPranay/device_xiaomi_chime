@@ -61,10 +61,6 @@ PRODUCT_PACKAGES += \
     libqdMetaData.system \
     libvulkan
 
-# Doze
-PRODUCT_PACKAGES += \
-    XiaomiDoze
-
 # Fastbootd
 PRODUCT_PACKAGES += \
     fastbootd
