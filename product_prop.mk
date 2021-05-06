@@ -25,3 +25,9 @@ PRODUCT_PRODUCT_PROPERTIES += \
     debug.hwui.renderer=skiavk \
     ro.surface_flinger.max_frame_buffer_acquired_buffers=3 \
     debug.sf.latch_unsignaled=0
+
+# Media
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.config.media_vol_default=10 \
+    ro.config.media_vol_steps=15 \
+    ro.config.vc_call_vol_steps=6
