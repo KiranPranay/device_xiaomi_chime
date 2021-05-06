@@ -157,3 +157,4 @@ PRODUCT_PACKAGES += \
     WifiResCommon
 
 -include $(LOCAL_PATH)/product_prop.mk
+-include $(LOCAL_PATH)/system_prop.mk
