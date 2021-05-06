@@ -35,6 +35,8 @@ TARGET_OTA_ASSERT_DEVICE := lime,citrus,lemon,pomelo,juice
 
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth/include
+TARGET_FWK_SUPPORTS_FULL_VALUEADDS := true
+TARGET_USE_QTI_BT_STACK := true
 
 # Bootloader
 TARGET_BOARD_PLATFORM := bengal
