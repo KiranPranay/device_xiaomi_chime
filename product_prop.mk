@@ -10,6 +10,12 @@ PRODUCT_PRODUCT_PROPERTIES += \
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.bluetooth.library_name=libbluetooth.so
 
+# Blurs
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.surface_flinger.supports_background_blur=1 \
+    persist.sys.sf.disable_blurs=1 \
+    ro.sf.blurs_are_expensive=1
+
 # Always use GPU for screen compositing
 PRODUCT_PROPERTY_OVERRIDES += \
     debug.sf.disable_hwc_overlays=1
