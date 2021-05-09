@@ -238,6 +238,9 @@
     <!-- Enable 802.11ac for Wifi hotspot (SAP) -->
      <bool name="config_wifi_softap_ieee80211ac_supported">false</bool>
 
+   <!-- Enable Zram writeback feature to allow unused pages in zram be written to flash. -->
+    <bool name="config_zramWriteback">true</bool>
+
     <!-- Boolean indicating if restoring network selection should be skipped -->
     <!-- The restoring is handled by modem if it is true-->
      <bool name="skip_restoring_network_selection">false</bool>
