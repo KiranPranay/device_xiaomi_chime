@@ -19,3 +19,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.media_vol_default=10 \
     ro.config.media_vol_steps=15 \
     ro.config.vc_call_vol_steps=6
+
+# Power-saving props
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.vendor.use_data_netmgrd=true \
+    ro.vold.umsdirtyratio=20 \
+    ro.ril.disable.power.collapse=0 \
+    power.saving.mode=1 \
+    pm.sleep_mode=1
