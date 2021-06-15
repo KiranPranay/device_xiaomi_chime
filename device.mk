@@ -56,6 +56,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     BluetoothQti
 
+# Google Camera
+PRODUCT_PACKAGES += \
+    GoogleCameraGo
+
 # Display
 PRODUCT_PACKAGES += \
     libdisplayconfig \
