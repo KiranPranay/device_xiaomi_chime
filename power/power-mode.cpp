@@ -20,6 +20,8 @@
 #include <android-base/logging.h>
 #include <linux/input.h>
 
+#define BATTERY_SAVER_NODE "/sys/module/battery_saver/parameters/enabled"
+
 namespace {
 
 int open_ts_input() {
@@ -89,7 +91,7 @@ bool setDeviceSpecificMode(Mode type, bool enabled) {
 	switch (type) {
 		case Mode::DOUBLE_TAP_TO_WAKE: 
                 case Mode::LOW_POWER:
-                    power_hint(POWER_HINT_LOW_POWER, reinterpret_cast<void*>(enabled));
+                    ::android::base::WriteStringToFile(enabled ? "Y" : "N", BATTERY_SAVER_NODE, true);
 			int fd = open_ts_input();
 			if (fd == -1) {
 				LOG(WARNING)
