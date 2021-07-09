@@ -58,25 +58,24 @@ void property_override(char const prop[], char const value[], bool add = true) {
 }
 
 void vendor_load_properties() {
-    const auto set_ro_build_prop = [](const std::string &source,
-                                      const std::string &prop,
-                                      const std::string &value) {
-        auto prop_name = "ro." + source + "build." + prop;
-        property_override(prop_name.c_str(), value.c_str(), false);
-    };
+    std::string region = GetProperty("ro.boot.hwc", "");
+    std::string hwname = GetProperty("ro.boot.product.hardware.sku", "");
 
-    const auto set_ro_product_prop = [](const std::string &source,
-                                        const std::string &prop,
-                                        const std::string &value) {
-        auto prop_name = "ro.product." + source + prop;
-        property_override(prop_name.c_str(), value.c_str(), false);
-    };
-
-    for (const auto &source : ro_props_default_source_order) {
-        set_ro_build_prop(source, "fingerprint",
-                          "xiaomi/lime_global/lime:10/QKQ1.200830.002/V12.0.3.0.QJFMIXM:user/release-keys");
-        set_ro_product_prop(source, "brand", "Xiaomi");
-        set_ro_product_prop(source, "device", "juice");
-        set_ro_product_prop(source, "model", "POCO M3 / Redmi 9T");
+    if (hwname == "lime") {
+        property_override("ro.product.brand", "Redmi");
+        property_override("ro.product.model", "Redmi 9T");
+        property_override("ro.product.device", "lime");   
+    } else if (hwname == "lemon") {
+        property_override("ro.product.brand", "Redmi");
+        property_override("ro.product.model", "Redmi 9T");
+        property_override("ro.product.device", "lemon");
+    } else if (hwname == "pomelo") {
+        property_override("ro.product.brand", "Redmi");
+        property_override("ro.product.model", "Redmi 9T");
+        property_override("ro.product.device", "pomelo");
+    } else if (hwname == "citrus") {
+        property_override("ro.product.brand", "POCO");
+        property_override("ro.product.model", "POCO M3");
+        property_override("ro.product.device", "citrus");
     }
 }
