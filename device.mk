@@ -155,7 +155,8 @@ PRODUCT_PACKAGES += \
     SystemUIResCommon \
     TelecommResCommon \
     TelephonyResCommon \
-    WifiResCommon
+    WifiResCommon \
+    NotchBarKiller
 
 -include $(LOCAL_PATH)/product_prop.mk
 -include $(LOCAL_PATH)/system_prop.mk
