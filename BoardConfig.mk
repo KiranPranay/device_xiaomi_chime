@@ -48,8 +48,6 @@ TARGET_BOOTLOADER_BOARD_NAME := bengal
 # Camera
 TARGET_USES_QTI_CAMERA_DEVICE := true
 
-# Charger Mode
- BOARD_CHARGER_ENABLE_SUSPEND := true
 
 # Display
 TARGET_USES_HWC2 := true
