@@ -96,6 +96,10 @@ TARGET_KERNEL_HEADERS := kernel/poco/citrus
 TARGET_KERNEL_SOURCE := kernel/poco/citrus
 TARGET_KERNEL_CONFIG := vendor/citrus-perf_defconfig
 
+TARGET_KERNEL_CLANG_COMPILE := true
+TARGET_KERNEL_CLANG_VERSION := proton
+KERNEL_TOOLCHAIN_PATH := $(shell pwd)/prebuilts/clang/host/linux-x86/clang-proton/bin/aarch64-linux-gnu-
+
 TARGET_PREBUILT_DTB := $(DEVICE_PATH)/prebuilt/dtb
 BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilt/dtbo.img
 BOARD_BOOTIMG_HEADER_VERSION := 2
