@@ -18,9 +18,14 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Graphics
 PRODUCT_PRODUCT_PROPERTIES += \
-    debug.hwui.renderer=skiavk \
+    debug.hwui.renderer=opengl \
     ro.surface_flinger.max_frame_buffer_acquired_buffers=3 \
     debug.sf.latch_unsignaled=0
+    ro.hardware.egl=adreno \
+    ro.hardware.vulkan=adreno \
+    ro.surface_flinger.protected_contents=true \
+    ro.surface_flinger.has_HDR_display=true \
+    ro.surface_flinger.use_color_management=true
 
 # Media
 PRODUCT_PROPERTY_OVERRIDES += \
