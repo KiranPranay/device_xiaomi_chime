@@ -90,9 +90,8 @@ BOARD_KERNEL_OFFSET := 0x00008000
 BOARD_KERNEL_IMAGE_NAME := Image.gz
 BOARD_KERNEL_SEPARATED_DTBO := false
 TARGET_KERNEL_ARCH := arm64
-TARGET_KERNEL_HEADERS := kernel/poco/citrus
-TARGET_KERNEL_SOURCE := kernel/poco/citrus
-TARGET_KERNEL_CONFIG := vendor/citrus-perf_defconfig
+TARGET_KERNEL_HEADERS := kernel/xiaomi/juice
+TARGET_KERNEL_CONFIG := vendor/mibengal_defconfig
 
 TARGET_KERNEL_CLANG_COMPILE := true
 TARGET_KERNEL_CLANG_VERSION := proton
