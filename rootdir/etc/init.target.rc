@@ -188,6 +188,10 @@ on boot && property:persist.vendor.usb.controller.default=*
 on property:vendor.usb.controller=*
     setprop sys.usb.controller ${vendor.usb.controller}
 
+    # Back to default VM settings
+    write /proc/sys/vm/dirty_expire_centisecs 3000
+    write /proc/sys/vm/dirty_background_ratio 10
+
 on charger
     start vendor.power_off_alarm
     setprop vendor.usb.controller 4e00000.dwc3
