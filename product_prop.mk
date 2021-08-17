@@ -36,9 +36,7 @@ PRODUCT_PRODUCT_PROPERTIES += \
     vendor.display.disable_rotator_ubwc=1 \
     vendor.display.disable_layer_stitch=0 \
     vendor.display.disable_hw_recovery_dump=1 \
-    vendor.display.disable_rotator_downscale=1 \
-    debug.sf.hw=0 \
-    debug.egl.hw=0
+    vendor.display.disable_rotator_downscale=1 
 
 # IORap
 PRODUCT_PRODUCT_PROPERTIES += \
