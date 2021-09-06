@@ -232,6 +232,12 @@ service vendor.mdm_helper /vendor/bin/mdm_helper
     group system wakelock
     disabled
 
+service vendor.adsprpcd /vendor/bin/adsprpcd
+    class main
+    user media
+    group media
+    disabled
+
 service audioshell_service /vendor/bin/audioshell_service
     oneshot
     disabled
