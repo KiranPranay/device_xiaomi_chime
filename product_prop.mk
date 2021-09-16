@@ -19,24 +19,13 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Graphics
 PRODUCT_PRODUCT_PROPERTIES += \
     debug.hwui.renderer=opengl \
-    ro.surface_flinger.max_frame_buffer_acquired_buffers=3 \
-    debug.sf.latch_unsignaled=0 \
-    ro.hardware.egl=adreno \
-    ro.hardware.vulkan=adreno \
-    ro.surface_flinger.protected_contents=true \
-    ro.surface_flinger.has_HDR_display=true \
+    debug.sf.disable_backpressure=1 \
     ro.surface_flinger.use_color_management=true \
-    debug.mdpcomp.logs=0 \
-    vendor.gralloc.disable_ubwc=0 \
-    vendor.display.disable_scaler=0 \
-    vendor.display.disable_excl_rect=0 \
-    vendor.display.disable_excl_rect_partial_fb=1 \
-    vendor.display.comp_mask=0 \
-    debug.sf.disable_client_composition_cache=1 \
-    vendor.display.disable_rotator_ubwc=1 \
-    vendor.display.disable_layer_stitch=0 \
-    vendor.display.disable_hw_recovery_dump=1 \
-    vendor.display.disable_rotator_downscale=1 
+    ro.surface_flinger.use_context_priority=true \
+    ro.surface_flinger.has_wide_color_display=false \
+    debug.sf.latch_unsignaled=1 \
+    ro.hardware.egl=adreno \
+    ro.hardware.vulkan=adreno
 
 # IORap
 PRODUCT_PRODUCT_PROPERTIES += \
