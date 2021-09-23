@@ -25,7 +25,11 @@ PRODUCT_PRODUCT_PROPERTIES += \
     ro.surface_flinger.has_wide_color_display=false \
     debug.sf.latch_unsignaled=1 \
     ro.hardware.egl=adreno \
-    ro.hardware.vulkan=adreno
+    ro.hardware.vulkan=adreno \
+    debug.sdm.support_writeback=0 \
+    debug.enable.sglscale=1 \
+    debug.mdpcomp.logs=0 \
+    debug.sf.recomputecrop=0
 
 # IORap
 PRODUCT_PRODUCT_PROPERTIES += \
