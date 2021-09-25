@@ -91,6 +91,10 @@ on post-fs-data
 on early-boot
 
 on boot
+# Adaptive Charging
+    chown system system /sys/class/power_supply/battery/input_suspend
+    chmod 0666 /sys/class/power_supply/battery/input_suspend
+
 # wuzhisen change Define cpu set for audio app. This is to optimize
 # audio scheduling against lpm exit latencies
     write /dev/cpuset/audio-app/cpus 1-2
