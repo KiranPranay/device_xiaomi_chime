@@ -30,7 +30,8 @@ PRODUCT_PRODUCT_PROPERTIES += \
     debug.enable.sglscale=1 \
     debug.mdpcomp.logs=0 \
     debug.sf.recomputecrop=0 \
-    debug.egl.force_msaa=1
+    debug.egl.force_msaa=1 \
+    debug.egl.buffcount=4
 
 # IORap
 PRODUCT_PRODUCT_PROPERTIES += \
