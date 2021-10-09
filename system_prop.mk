@@ -22,6 +22,15 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.radio.voice_on_lte=1 \
     persist.vendor.radio.calls.on.ims=1
 
+# Kill IMS Logs
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.vendor.radio.enable_temp_dds=true \
+    persist.vendor.radio.report_codec=1 \
+    persist.vendor.ims.disableADBLogs=1 \
+    persist.vendor.ims.disableDebugLogs=1 \
+    persist.vendor.ims.disableIMSLogs=1 \
+    persist.vendor.ims.disableQXDMLogs=1
+
 # Memory optimizations
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.qti.sys.fw.bservice_enable=true \
