@@ -10,7 +10,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Charger Mode
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.charger.enable_suspend=true
+    ro.charger.enable_suspend=true \
+    persist.vendor.quick.charge=1
 
 # IMS
 PRODUCT_PROPERTY_OVERRIDES += \
