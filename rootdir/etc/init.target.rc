@@ -489,4 +489,4 @@ on property:sys.boot_completed=1
 
 # Touchpanel
     chown system system /sys/touchpanel/double_tap
-    chmod 0660 /sys/touchpanel/double_tap
+    chmod 0777 /sys/touchpanel/double_tap
