@@ -39,6 +39,10 @@ PRODUCT_PRODUCT_PROPERTIES += \
     iorapd.perfetto.enable=true \
     iorapd.readahead.enable=true
 
+# IORap
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.device_config.runtime_native_boot.iorap_readahead_enable=true
+
 # Media
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.media_vol_default=10 \
