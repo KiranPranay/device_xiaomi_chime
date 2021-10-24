@@ -52,6 +52,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.netflix.bsp_rev=Q6115-31409-1
 
+# RIL
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.sys.fflag.override.settings_provider_model=false
+
 # Scroll optimization
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.perf.scroll_opt=true
