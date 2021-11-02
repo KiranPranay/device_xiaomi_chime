@@ -100,7 +100,7 @@ BOARD_KERNEL_IMAGE_NAME := Image.gz
 BOARD_KERNEL_SEPARATED_DTBO := false
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADERS := kernel/xiaomi/juice
-TARGET_KERNEL_CONFIG := vendor/mibengal-alt_defconfig
+TARGET_KERNEL_CONFIG := vendor/fury-perf_defconfig
 
 KERNEL_TOOLCHAIN := $(PWD)/prebuilts/gcc/linux-x86/aarch64/aarch64-elf/bin
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-elf-
