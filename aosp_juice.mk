@@ -33,8 +33,7 @@ PEX_MAINTAINER := PranayKiran
 TARGET_BOOT_ANIMATION_RES := 1080
 
 # Fingerprint
-BUILD_FINGERPRINT := "google/redfin/redfin:11/RQ3A.211001.001/7641976:user/release-keys"
-BUILD_DESCRIPTION := redfin-user 11 RQ3A.211001.001 7641976 release-keys
+BUILD_FINGERPRINT := "google/raven/raven:12/SD1A.210817.036/7805805:user/release-keys"
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.build.fingerprint=$(BUILD_FINGERPRINT)
