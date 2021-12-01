@@ -20,7 +20,7 @@
      for different hardware and product builds. -->
 <resources>
     <!-- Doze: does this device support STATE_DOZE?  -->
-    <bool name="doze_display_state_supported">false</bool>
+    <bool name="doze_display_state_supported">true</bool>
 
     <!-- Whether usage of the proximity sensor during doze is supported -->
     <bool name="doze_proximity_sensor_supported">false</bool>
