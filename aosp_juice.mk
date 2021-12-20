@@ -33,7 +33,8 @@ PEX_MAINTAINER := PranayKiran
 TARGET_BOOT_ANIMATION_RES := 1080
 
 # Fingerprint
-BUILD_FINGERPRINT := "google/raven/raven:12/SD1A.210817.036/7805805:user/release-keys"
+BUILD_FINGERPRINT := "google/raven/raven:12/SQ1D.211205.016.A1/7957957:user/release-keys"
+BUILD_DESCRIPTION := raven-user 12 SQ1D.211205.016.A1 7957957 release-keys
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.build.fingerprint=$(BUILD_FINGERPRINT)
