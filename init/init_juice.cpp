@@ -57,25 +57,63 @@ void property_override(char const prop[], char const value[], bool add = true) {
         __system_property_add(prop, strlen(prop), value, strlen(value));
 }
 
-void vendor_load_properties() {
-    std::string region = GetProperty("ro.boot.hwc", "");
+void set_device_props(const std::string brand, const std::string device, const std::string model, const std::string name, const std::string marketname)
+    {
+    const auto set_ro_product_prop = [](const std::string &source,
+                                        const std::string &prop,
+                                        const std::string &value) {
+        auto prop_name = "ro.product." + source + prop;
+        property_override(prop_name.c_str(), value.c_str(), true);
+    };
+
+    for (const auto &source : ro_props_default_source_order) {
+        set_ro_product_prop(source, "brand", brand);
+        set_ro_product_prop(source, "device", device);
+        set_ro_product_prop(source, "model", model);
+        set_ro_product_prop(source, "name", name);
+        set_ro_product_prop(source, "marketname", marketname);
+    }
+}
+
+void load_device_properties() {
     std::string hwname = GetProperty("ro.boot.product.hardware.sku", "");
+    std::string region = GetProperty("ro.boot.hwc", "");
 
     if (hwname == "lime") {
-        property_override("ro.product.brand", "Redmi");
-        property_override("ro.product.model", "Redmi 9T");
-        property_override("ro.product.device", "lime");   
+        if (region == "Global") {
+            set_device_props(
+                    "Redmi", "lime", "M2010J19SG", "lime_global", "Redmi 9T");
+		    property_override("ro.product.mod_device", "lime_global");
+        } else if (region == "India") {
+            set_device_props(
+                    "Redmi", "lime", "M2010J19SI", "lime", "Redmi 9 Power");
+		    property_override("ro.product.mod_device", "lime");
+        } else if (region == "CN") {
+            set_device_props(
+      		    "Redmi", "lime", "M2010J19SC", "lime", "Redmi Note 9 4G");
+		    property_override("ro.product.mod_device", "lime");
+        }
     } else if (hwname == "lemon") {
-        property_override("ro.product.brand", "Redmi");
-        property_override("ro.product.model", "Redmi 9T");
-        property_override("ro.product.device", "lemon");
-    } else if (hwname == "pomelo") {
-        property_override("ro.product.brand", "Redmi");
-        property_override("ro.product.model", "Redmi 9T");
-        property_override("ro.product.device", "pomelo");
+        set_device_props(
+                "Redmi", "lemon", "M2010J19SY", "lemon_global", "Redmi 9T NFC");
+		property_override("ro.product.mod_device", "lemon_global");
     } else if (hwname == "citrus") {
-        property_override("ro.product.brand", "POCO");
-        property_override("ro.product.model", "POCO M3");
-        property_override("ro.product.device", "citrus");
+        else if (region == "Global") {
+            set_device_props(
+                "POCO", "citrus", "M2010J19CG", "citrus_global", "POCO M3");
+		property_override("ro.product.mod_device", "citrus_global");
+	} else if (region == "India") {
+	    set_device_props(
+		"POCO", "citrus", "M2010J19CI", "citrus", "POCO M3");
+		property_override("ro.product.mod_device", "citrus");
+        }
+    } else if (hwname == "pomelo") {
+        set_device_props(
+                "Redmi", "pomelo", "M2010J19SL" "pomelo" "Redmi 9T");
+		property_override("ro.product.mod_device", "pomelo");
     }
+}
+
+void vendor_load_properties() {
+    load_device_properties();
 }
