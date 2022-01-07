@@ -51,6 +51,7 @@ PRODUCT_PACKAGES += \
     audio.bluetooth.default \
     audio.r_submix.default \
     audio.primary.bengal \
+    audio.primary.default \
     audio.usb.default \
     libaudio-resampler \
     libqcompostprocbundle \
