@@ -94,6 +94,16 @@ PRODUCT_PACKAGES += \
     android.hardware.gnss.visibility_control@1.0 \
     android.hardware.gnss.visibility_control@1.0.vendor
 
+# FM
+PRODUCT_PACKAGES += \
+    FM2 \
+    libqcomfm_jni \
+    qcom.fmradio \
+    qcom.fmradio.xml
+
+PRODUCT_BOOT_JARS += \
+    qcom.fmradio
+
 # Health
 PRODUCT_PACKAGES += \
     android.hardware.health@2.1-impl \
