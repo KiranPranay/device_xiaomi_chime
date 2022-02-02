@@ -1,0 +1,11 @@
+android_app_import {
+	name: "HotwordEnrollmentOKGoogleHEXAGON",
+	owner: "google",
+	apk: "HotwordEnrollmentOKGoogleHEXAGON.apk",
+	presigned: true,
+	dex_preopt: {
+		enabled: false,
+	},
+	product_specific: true,
+    privileged: true
+}
