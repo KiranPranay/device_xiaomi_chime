@@ -169,6 +169,26 @@ PRODUCT_COPY_FILES += \
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay
 
+# Overlays - override
+PRODUCT_PACKAGES += \
+    AospFrameworkResOverlay \
+    AospWifiResOverlay \
+    DevicesAndroidOverlay \
+    DevicesOverlay \
+    ElderlyNavigationBarOverlay \
+    FrameworksResTarget \
+    GestureLineOverlay \
+    MccMncOverlay \
+    MiuiBiometricResOverlay \
+    MiuiBluetoothOverlay \
+    MiuiFrameworkResOverlay \
+    MiuiOptimizationOverlay \
+    MiuiSettingsResOverlay \
+    MiuiSystemUIPluginResOverlay \
+    MiuiSystemUIResOverlay \
+    ProvisionResOverlay \
+    WifiResTarget
+
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power-service-qti \
