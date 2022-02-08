@@ -15,3 +15,8 @@ service vendor.light-hal-2-0 /vendor/bin/hw/android.hardware.light@2.0-service
     group system
     # shutting off lights while powering-off
     shutdown critical
+
+on property:sys.boot_completed=1
+    # Restrict permissions to socket file
+    # to hide Magisk & co.
+    chmod 440 /proc/net/unix
