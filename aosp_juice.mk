@@ -29,6 +29,9 @@ PEX_BUILD_TYPE := OFFICIAL
 # PEX Maintainer
 PEX_MAINTAINER := PranayKiran
 
+# Quick Tap
+TARGET_SUPPORTS_QUICK_TAP := true
+
 # Boot Resolution
 TARGET_BOOT_ANIMATION_RES := 1080
 
