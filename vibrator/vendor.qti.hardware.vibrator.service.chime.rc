@@ -1,0 +1,4 @@
+service vendor.qti.vibrator.chime /vendor/bin/hw/vendor.qti.hardware.vibrator.service.chime
+    class hal
+    user system
+    group system input
