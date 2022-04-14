@@ -5,6 +5,7 @@ on boot
     chmod 0644 /sys/class/backlight/panel0-backlight/brightness
     chmod 0644 /sys/class/backlight/panel0-backlight/max_brightness
     # Force enable DT2W
+    chown system system /sys/touchpanel/double_tap
     chmod 0777 /sys/touchpanel/double_tap
     write /sys/touchpanel/double_tap 1
 
