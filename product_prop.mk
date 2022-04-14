@@ -33,6 +33,11 @@ PRODUCT_PRODUCT_PROPERTIES += \
     debug.egl.force_msaa=1 \
     debug.egl.buffcount=4
 
+# FUSE Passthrough
+PRODUCT_PRODUCT_PROPERTIES += \
+    persist.sys.fuse.passthrough.enable=true \
+    persist.sys.fuse.bpf.enable=false
+
 # IORap
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.iorapd.enable=true \
