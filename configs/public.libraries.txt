@@ -1,0 +1,28 @@
+libqti-perfd-client.so
+libadsprpc.so
+libcdsprpc.so
+libsdsprpc.so
+libfastcvopt.so
+liblistensoundmodel2.so
+libOpenCL.so
+
+libmialgoengine.so 64
+libmpbase.so 64
+libHalSuperSensorServer.so 64
+libSuperSensor.so 64
+libSuperSensorCPU.so 64
+libarcsoft_beautyshot.so 64
+libmiStereoFactoryRemapLib.so 64
+libanc_dc_base.so 64
+libwa_dof.so 64
+libwa_refocus.so 64
+libalCFR.so 64
+libalhLDC.so 64
+libflaw.so 64
+libsdk_sr.so 64
+libst_sr_models.so 64
+libxmi_high_dynamic_range.so 64
+libmibokeh_712.so 64
+libbeauty_face_interface.so 64
+libc++_shared.so 64
+libmiai_supernight.so 64
