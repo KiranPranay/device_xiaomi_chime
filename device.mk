@@ -452,6 +452,9 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.vibrator.service.chime \
     vendor.qti.hardware.vibrator-impl
 
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/vibrator/etc/excluded-input-devices.xml:$(TARGET_COPY_OUT_VENDOR)/etc/excluded-input-devices.xml
+
 # Wi-Fi
 PRODUCT_PACKAGES += \
     android.hardware.wifi@1.0-service \
