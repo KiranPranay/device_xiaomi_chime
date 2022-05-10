@@ -3,6 +3,7 @@
 
 # Camera
 /mnt/vendor/persist/camera(/.*)?                                        u:object_r:camera_persist_file:s0
+/vendor/bin/f2player                                                    u:object_r:hal_camera_default_exec:s0
 
 # Data files
 /data/per_boot(/.*)?                                                    u:object_r:per_boot_file:s0
