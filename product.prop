@@ -5,3 +5,9 @@ audio.sys.mute.latency.factor=2
 audio.sys.routing.latency=0
 audio.offload.min.duration.secs=30
 audio.sys.offload.pstimeout.secs=3
+
+# Low memory killer daemon
+ro.lmk.log_stats=true
+ro.lmk.kill_heaviest_task=true
+ro.lmk.kill_timeout_ms=100
+ro.lmk.use_minfree_levels=true
