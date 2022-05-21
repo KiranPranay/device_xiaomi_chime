@@ -146,6 +146,29 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/qti_whitelist.xml:system/etc/sysconfig/qti_whitelist.xml \
     $(LOCAL_PATH)/configs/privapp-permissions-qti.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/privapp-permissions-qti.xml
 
+# Ramdisk
+PRODUCT_PACKAGES += \
+    init.class_main.sh \
+    init.qcom.early_boot.sh \
+    init.qcom.post_boot.sh \
+    init.qcom.sh \
+    init.qti.dcvs.sh
+
+PRODUCT_PACKAGES += \
+    init.qcom.factory.rc \
+    init.qcom.rc \
+    init.qti.ufs.rc \
+    init.recovery.qcom.rc \
+    init.stnfc.rc \
+    init.target.rc \
+    fstab.default \
+    fstab.emmc \
+    ueventd.qcom.rc
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/rootdir/etc/fstab.default:$(TARGET_COPY_OUT_RAMDISK)/fstab.default \
+    $(LOCAL_PATH)/rootdir/etc/fstab.emmc:$(TARGET_COPY_OUT_RAMDISK)/fstab.emmc
+
 # Shipping API level
 PRODUCT_SHIPPING_API_LEVEL := 29
 
