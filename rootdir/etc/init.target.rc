@@ -201,7 +201,6 @@ on charger
     class main
     user root
     group system
-    seclabel u:r:mi_thermald:s0
 
 #pd-mapper
 service vendor.pd_mapper /vendor/bin/pd-mapper
