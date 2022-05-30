@@ -156,8 +156,8 @@ vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so
 vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.1.so
 
 # Bluetooth (aptX) - from sunfish RQ1A.201205.008
-system_ext/lib64/libaptX_encoder.so|df1c89d7af1bb35808d5fe3496b04ba066c10cbc
 system_ext/lib64/libaptXHD_encoder.so|e13fa70c97caaa24d061678bdee608eb8850a69e
+system_ext/lib64/libaptX_encoder.so|df1c89d7af1bb35808d5fe3496b04ba066c10cbc
 
 # Camera
 vendor/bin/f2player
@@ -664,19 +664,29 @@ vendor/lib64/vendor.qti.esepowermanager@1.1.so
 
 # Fingerprint
 vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service
+vendor/bin/hw/vendor.silead.hardware.fingerprintext@1.0-service
 vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service.rc
+vendor/etc/init/vendor.silead.hardware.fingerprintext@1.0-service.rc
+vendor/etc/permissions/com.fingerprints.extension.xml
+-vendor/framework/com.fingerprints.extension.jar
 vendor/lib/hw/fingerprint.default.so
+vendor/lib/hw/fingerprint.silead.default.so
 vendor/lib/com.fingerprints.extension@1.0.so
-vendor/lib/com.fingerprints.extension@1.0.so
+vendor/lib/libsl_fp_impl.so
+vendor/lib/vendor.qti.hardware.fingerprint@1.0.so
 vendor/lib64/hw/cdfinger.fingerprint.default.so
 vendor/lib64/hw/fingerprint.default.so
+vendor/lib64/hw/fingerprint.silead.default.so
 vendor/lib64/hw/focal_fingerprint.default.so
 vendor/lib64/hw/gf_fingerprint.default.so
+vendor/lib64/com.fingerprints.extension@1.0.so
 vendor/lib64/libgf_ca.so
 vendor/lib64/libgf_hal.so
 vendor/lib64/libgoodixhwfingerprint.so
+vendor/lib64/libsl_fp_impl.so
 vendor/lib64/libvendor.goodix.hardware.biometrics.fingerprint@2.1.so
 vendor/lib64/vendor.qti.hardware.fingerprint@1.0.so
+vendor/lib64/vendor.silead.hardware.fingerprintext@1.0.so
 
 # FM
 system_ext/lib64/fm_helium.so
