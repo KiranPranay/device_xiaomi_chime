@@ -1,0 +1,5 @@
+# Device
+vendor_internal_prop(vendor_device_prop)
+
+# Thermal
+vendor_internal_prop(vendor_thermal_normal_prop)

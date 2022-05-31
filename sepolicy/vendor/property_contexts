@@ -1,0 +1,37 @@
+# Camera
+persist.camera.                                 u:object_r:vendor_camera_prop:s0
+persist.vendor.camera                           u:object_r:vendor_camera_prop:s0
+vendor.camera.                                  u:object_r:vendor_camera_prop:s0
+ro.vendor.camera.                               u:object_r:vendor_camera_prop:s0
+
+# DFPS
+persist.vendor.dfps.level                       u:object_r:vendor_display_prop:s0
+persist.vendor.video.dfps.level                 u:object_r:vendor_display_prop:s0
+persist.vendor.power.dfps.level                 u:object_r:vendor_display_prop:s0
+
+# Fingerprint
+gf.debug.                                       u:object_r:vendor_fp_prop:s0
+persist.vendor.fpc.                             u:object_r:vendor_fp_prop:s0
+persist.vendor.sys.fp.                          u:object_r:vendor_fp_prop:s0
+persist.sys.fp.                                 u:object_r:vendor_fp_prop:s0
+persist.sys.fp.info                             u:object_r:vendor_fp_prop:s0
+ro.hardware.fp                                  u:object_r:vendor_fp_prop:s0
+vendor.fps_hal.                                 u:object_r:vendor_fp_prop:s0
+vendor.silead.fp.ext.enable                     u:object_r:vendor_fp_prop:s0
+vendor.sys.fp                                   u:object_r:vendor_fp_prop:s0
+ro.boot.fpsensor                                u:object_r:vendor_fp_prop:s0
+ro.hardware.fp.sideCap                          u:object_r:vendor_fp_prop:s0
+sys.fp.vendor                                   u:object_r:vendor_fp_prop:s0
+
+# Global
+ro.boot.factorybuild                            u:object_r:vendor_public_vendor_default_prop:s0
+ro.boot.hwversion                               u:object_r:vendor_public_vendor_default_prop:s0
+
+# Mlipay
+persist.vendor.sys.pay                          u:object_r:vendor_tee_listener_prop:s0
+
+# RIL
+ro.vendor.ril                                   u:object_r:vendor_public_vendor_default_prop:s0
+
+# Thermal
+vendor.sys.thermal.                             u:object_r:vendor_thermal_normal_prop:s0
