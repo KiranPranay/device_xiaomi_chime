@@ -38,3 +38,5 @@ allow hal_fingerprint_default sysfs:file { write };
 
 # Allow FP to access vndservicemanager via IPC
 binder_call(hal_fingerprint_default, vndservicemanager)
+
+allow hal_fingerprint_default fingerprint_vndservice:service_manager { add find };
