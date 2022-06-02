@@ -163,16 +163,16 @@ ro.frp.pst=/dev/block/bootdevice/by-name/frp
 vendor.gatekeeper.disable_spu=true
 
 # Graphics
-debug.egl.hw=0
+debug.sf.latch_unsignaled=0
+debug.sf.disable_client_composition_cache=1
+debug.sdm.support_writeback=0
 debug.hwui.renderer=skiagl
-debug.mdpcomp.logs=0
 debug.renderengine.backend=skiaglthreaded
 debug.sf.enable_advanced_sf_phase_offset=1
 debug.sf.high_fps_early_gl_phase_offset_ns=-5000000
 debug.sf.high_fps_early_phase_offset_ns=-5000000
 debug.sf.high_fps_late_app_phase_offset_ns=1000000
 debug.sf.high_fps_late_sf_phase_offset_ns=-5000000
-debug.sf.hw=0
 renderthread.skia.reduceopstasksplitting=true
 persist.demo.hdmirotationlock=false
 persist.sys.sf.color_mode=7
@@ -199,6 +199,24 @@ vendor.display.use_smooth_motion=1
 vendor.gralloc.disable_ubwc=0
 vendor.gralloc.enable_fb_ubwc=1
 vendor.gralloc.secure_preview_buffer_format=420_sp
+
+#hwui properties
+ro.hwui.texture_cache_size=72
+ro.hwui.layer_cache_size=48
+ro.hwui.r_buffer_cache_size=8
+ro.hwui.path_cache_size=32
+ro.hwui.gradient_cache_size=1
+ro.hwui.drop_shadow_cache_size=6
+ro.hwui.texture_cache_flushrate=0.4
+ro.hwui.text_small_cache_width=1024
+ro.hwui.text_small_cache_height=1024
+ro.hwui.text_large_cache_width=2048
+ro.hwui.text_large_cache_height=1024
+
+debug.sf.disable_client_composition_cache=1
+ro.config.avoid_gfx_accel=true
+debug.sf.layer_caching_active_layer_timeout_ms=1000
+ro.surface_flinger.max_frame_buffer_acquired_buffers=3
 
 # Keystore
 ro.hardware.keystore_desede=true
