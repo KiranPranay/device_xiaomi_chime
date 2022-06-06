@@ -1,67 +1,157 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+**
+** Copyright 2018, The Android Open Source Project
+**
+** Licensed under the Apache License, Version 2.0 (the "License")
+** you may not use this file except in compliance with the License.
+** You may obtain a copy of the License at
+**
+**     http://www.apache.org/licenses/LICENSE-2.0
+**
+** Unless required by applicable law or agreed to in writing, software
+** distributed under the License is distributed on an "AS IS" BASIS,
+** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+** See the License for the specific language governing permissions and
+** limitations under the License.
+*/
+-->
 <device name="Android">
-    <item name="ambient.on">0.1</item>
-    <item name="screen.on">0.1</item>
-    <item name="screen.full">0.1</item>
-    <item name="bluetooth.active">0.1</item>
-    <item name="bluetooth.on">0.1</item>
-    <item name="wifi.on">0.1</item>
-    <item name="wifi.active">0.1</item>
-    <item name="wifi.scan">0.1</item>
-    <item name="audio">0.1</item>
-    <item name="video">0.1</item>
-    <item name="camera.flashlight">0.1</item>
-    <item name="camera.avg">0.1</item>
-    <item name="gps.on">0.1</item>
-    <item name="radio.active">0.1</item>
-    <item name="radio.scanning">0.1</item>
-    <array name="radio.on">
-        <value>0.2</value>
-        <value>0.1</value>
-    </array>
-    <array name="cpu.active">
-        <value>0.1</value>
-    </array>
+    <!-- All values are in mA except as noted -->
+    <item name="battery.capacity">6000</item>
+
+    <!-- Number of cores each CPU cluster contains -->
     <array name="cpu.clusters.cores">
-        <value>1</value>
+      <value>4</value> <!-- Cluster 0 has 4 cores (cpu0, cpu1, cpu2, cpu3) -->
+      <value>4</value> <!-- Cluster 1 has 4 cores (cpu4, cpu5, cpu6, cpu7) -->
     </array>
-    <array name="cpu.speeds.cluster0">
-        <value>400000</value>
+
+    <!-- Power consumption when CPU is suspended -->
+    <item name="cpu.suspend">5.6</item>
+    <!-- Additional power consumption when CPU is in a kernel idle loop -->
+    <item name="cpu.idle">5.4</item>
+
+    <!-- Additional power consumption by CPU excluding cluster and core when
+         running -->
+    <item name="cpu.active">8.4</item>
+
+    <!-- Additional power consumption by CPU cluster0 itself when running
+         excluding cores in it -->
+    <item name="cpu.cluster_power.cluster0">2</item>
+    <!-- Additional power consumption by CPU cluster1 itself when running
+         excluding cores in it -->
+    <item name="cpu.cluster_power.cluster1">2.2</item>
+
+    <!-- Different CPU speeds as reported in
+         /sys/devices/system/cpu/cpufreq/ploicy0/scaling_available_frequencies -->
+    <array name="cpu.core_speeds.cluster0">
+      <value>300000</value> <!-- 300 MHz CPU speed -->
+      <value>614400</value> <!-- 614 MHz CPU speed -->
+      <value>864000</value> <!-- 864 MHz CPU speed -->
+      <value>1017600</value> <!-- 1017 MHz CPU speed -->
+      <value>1305600</value> <!-- 1305 MHz CPU speed -->
+      <value>1420800</value> <!-- 1420 MHz CPU speed -->
+      <value>1612800</value> <!-- 1612 MHz CPU speed -->
+      <value>1804800</value> <!-- 1804 MHz CPU speed -->
     </array>
-    <array name="cpu.active.cluster0">
-        <value>0.1</value>
+    <!-- Different CPU speeds as reported in
+         /sys/devices/system/cpu/cpufreq/ploicy4/scaling_available_frequencies -->
+    <array name="cpu.core_speeds.cluster1">
+      <value>300000</value> <!-- 300 MHz CPU speed -->
+      <value>614400</value> <!-- 614 MHz CPU speed -->
+      <value>864000</value> <!-- 864 MHz CPU speed -->
+      <value>1017600</value> <!-- 1017 MHz CPU speed -->
+      <value>1305600</value> <!-- 1305 MHz CPU speed -->
+      <value>1420800</value> <!-- 1420 MHz CPU speed -->
+      <value>1612800</value> <!-- 1612 MHz CPU speed -->
+      <value>1804800</value> <!-- 1804 MHz CPU speed -->
+      <value>2016000</value> <!-- 2016 MHz CPU speed -->
     </array>
-    <item name="cpu.idle">0.1</item>
-    <array name="memory.bandwidths">
-        <value>22.7</value>
+
+    <!-- Additional power used by a CPU core from cluster 0 when running at
+         different speeds, excluding cluster and active cost -->
+    <array name="cpu.core_power.cluster0">
+      <value>4.2</value> <!-- 300 MHz CPU speed -->
+      <value>8.28</value> <!-- 614 MHz CPU speed -->
+      <value>11.99</value> <!-- 864 MHz CPU speed -->
+      <value>15.06</value> <!-- 1017 MHz CPU speed -->
+      <value>23.81</value> <!-- 1305 MHz CPU speed -->
+      <value>27.99</value> <!-- 1420 MHz CPU speed -->
+      <value>38.22</value> <!-- 1612 MHz CPU speed -->
+      <value>51.99</value> <!-- 1804 MHz CPU speed -->
     </array>
-    <item name="battery.capacity">1000</item>
-    <item name="wifi.controller.idle">0</item>
-    <item name="wifi.controller.rx">0</item>
-    <item name="wifi.controller.tx">0</item>
-    <array name="wifi.controller.tx_levels" />
-    <item name="wifi.controller.voltage">0</item>
-    <array name="wifi.batchedscan">
-        <value>.0002</value>
-        <value>.002</value>
-        <value>.02</value>
-        <value>.2</value>
-        <value>2</value>
+
+    <!-- Additional power used by a CPU core from cluster 1 when running at
+         different speeds, excluding cluster and active cost -->
+    <array name="cpu.core_power.cluster1">
+      <value>11.06</value> <!-- 300 MHz CPU speed -->
+      <value>23.81</value> <!-- 614 MHz CPU speed -->
+      <value>35.09</value> <!-- 864 MHz CPU speed -->
+      <value>44.08</value> <!-- 1017 MHz CPU speed -->
+      <value>73.08</value> <!-- 1305 MHz CPU speed -->
+      <value>87.18</value> <!-- 1420 MHz CPU speed -->
+      <value>100.24</value> <!-- 1612 MHz CPU speed -->
+      <value>134.31</value> <!-- 1804 MHz CPU speed -->
+      <value>192.47</value> <!-- 2016 MHz CPU speed -->
     </array>
+
+    <!-- Additional power used when screen is ambient mode -->
+    <item name="ambient.on.display0">32</item>
+
+    <!-- Additional power used when screen is turned on at minimum brightness -->
+    <item name="screen.on.display0">98</item>
+    <!-- Additional power used when screen is at maximum brightness, compared to
+         screen at minimum brightness -->
+    <item name="screen.full.display0">470</item>
+
+    <!-- Average power used by the camera flash module when on -->
+    <item name="camera.flashlight">240.47</item>
+    <!-- Average power use by the camera subsystem for a typical camera
+         application. Intended as a rough estimate for an application running a
+         preview and capturing approximately 10 full-resolution pictures per
+         minute. -->
+    <item name="camera.avg">900</item>
+
+    <!-- Additional power used when video is playing -->
+    <item name="video">25</item>
+    <!-- Additional power used when audio is playing -->
+    <item name="audio">75</item>
+
+    <!-- Cellular modem related values.-->
     <item name="modem.controller.sleep">0</item>
-    <item name="modem.controller.idle">0</item>
-    <item name="modem.controller.rx">0</item>
-    <array name="modem.controller.tx">
-        <value>0</value>
-        <value>0</value>
-        <value>0</value>
-        <value>0</value>
-        <value>0</value>
+    <item name="modem.controller.idle">100</item>
+    <item name="modem.controller.rx">91</item>
+    <array name="modem.controller.tx"> <!-- Strength 0 to 4 -->
+      <value>96</value>
+      <value>133</value>
+      <value>183</value>
+      <value>225</value>
+      <value>295</value>
     </array>
-    <item name="modem.controller.voltage">0</item>
-    <array name="gps.signalqualitybased">
-        <value>0</value>
-        <value>0</value>
+    <item name="modem.controller.voltage">3700</item>
+
+    <!-- GPS related values.-->
+    <array name="gps.signalqualitybased"> <!-- Strength 0 to 1 -->
+      <value>24</value>
+      <value>6</value>
     </array>
-    <item name="gps.voltage">0</item>
+    <item name="gps.voltage">3700</item>
+
+    <!-- Idle Receive current for wifi radio in mA.-->
+    <item name="wifi.controller.idle">82</item>
+    <!-- Rx current for wifi radio in mA.-->
+    <item name="wifi.controller.rx">125</item>
+    <!-- Tx current for wifi radio in mA-->
+    <item name="wifi.controller.tx">351</item>
+    <!-- Operating voltage for wifi radio in mV.-->
+    <item name="wifi.controller.voltage">3700</item>
+
+    <!-- Idle current for bluetooth in mA.-->
+    <item name="bluetooth.controller.idle">0.01</item>
+    <!-- Rx current for bluetooth in mA.-->
+    <item name="bluetooth.controller.rx">9</item>
+    <!-- Tx current for bluetooth in mA-->
+    <item name="bluetooth.controller.tx">7</item>
+    <!-- Operating voltage for bluetooth in mV.-->
+    <item name="bluetooth.controller.voltage">3300</item>
 </device>
