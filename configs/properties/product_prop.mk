@@ -23,6 +23,7 @@ PRODUCT_PRODUCT_PROPERTIES += \
     ro.surface_flinger.use_color_management=true \
     ro.surface_flinger.use_context_priority=true \
     ro.surface_flinger.has_wide_color_display=false \
+    ro.surface_flinger.max_virtual_display_dimension=4096 \
     debug.sf.latch_unsignaled=1 \
     ro.hardware.egl=adreno \
     ro.hardware.vulkan=adreno \
@@ -61,3 +62,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.ril.disable.power.collapse=0 \
     power.saving.mode=1 \
     pm.sleep_mode=1
+
+# WFD
+PRODUCT_PRODUCT_PROPERTIES += \
+    debug.sf.enable_hwc_vds=1 \
+    media.wfd.max_resolution=8 \
+    persist.debug.wfd.enable=1
