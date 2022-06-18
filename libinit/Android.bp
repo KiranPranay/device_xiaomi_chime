@@ -1,5 +1,5 @@
 //
-// Copyright (C) 2021 The LineageOS Project
+// Copyright (C) 2022 The LineageOS Project
 //
 // SPDX-License-Identifier: Apache-2.0
 //
@@ -20,7 +20,7 @@ cc_library_static {
     name: "init_chime",
     srcs: ["init_chime.cpp"],
     whole_static_libs: ["libinit_chime"],
-    include_dirs: [
+    include_dirs: [ 
         "system/libbase/include",
         "system/core/init",
     ],
