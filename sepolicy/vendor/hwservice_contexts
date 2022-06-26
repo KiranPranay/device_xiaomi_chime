@@ -1,5 +1,5 @@
 # VPP
-::vppService                                                                             u:object_r:hal_vpp_hwservice:s0
+::vppService                                                                             u:object_r:vendor_hal_vpp_hwservice:s0
 
 # Fingerprint
 com.fingerprints.extension::IFingerprintEngineering                                      u:object_r:hal_fingerprint_hwservice:s0
