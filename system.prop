@@ -1,9 +1,6 @@
 # Bluetooth
 vendor.bluetooth.soc=cherokee
 
-# Camera
-camera.disable_zsl_mode=1
-
 # Charger
 ro.charger.disable_init_blank=true
 persist.vendor.quick.charge=1
@@ -16,9 +13,6 @@ persist.vendor.dpm.feature=1
 
 # Display
 persist.demo.hdmirotationlock=false
-
-# DRM
-drm.service.enabled=true
 
 # Fingerprint
 ro.hardware.fp.sideCap=true
