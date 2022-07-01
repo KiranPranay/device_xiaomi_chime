@@ -30,9 +30,7 @@ PRODUCT_PRODUCT_PROPERTIES += \
     debug.sdm.support_writeback=0 \
     debug.enable.sglscale=1 \
     debug.mdpcomp.logs=0 \
-    debug.sf.recomputecrop=0 \
-    debug.egl.force_msaa=1 \
-    debug.egl.buffcount=4
+    debug.sf.recomputecrop=0
 
 # FUSE Passthrough
 PRODUCT_PRODUCT_PROPERTIES += \
