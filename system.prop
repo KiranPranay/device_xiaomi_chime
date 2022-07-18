@@ -76,9 +76,6 @@ ro.telephony.default_network=22,20
 persist.device_config.configuration.disable_rescue_party=true
 persist.sys.disable_rescue=true
 
-# Render
-debug.cpurend.vsync=false
-
 # RmNet data
 persist.data.df.agg.dl_pkt=10
 persist.data.df.agg.dl_size=4096
