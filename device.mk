@@ -111,8 +111,7 @@ PRODUCT_PACKAGES += \
     libcamera2ndk_vendor \
     libdng_sdk.vendor \
     libstdc++.vendor \
-    libgui_vendor \
-    libxml2
+    libgui_vendor
 
 # Component overrides
 PRODUCT_COPY_FILES += \
