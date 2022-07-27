@@ -22,6 +22,9 @@ PEX_BUILD_TYPE := OFFICIAL
 # PEX Maintainer
 PEX_MAINTAINER := PranayKiran
 
+# Quick Tap
+TARGET_SUPPORTS_QUICK_TAP := true
+
 # Device identifier. This must come after all inclusions.
 PRODUCT_NAME := aosp_chime
 PRODUCT_DEVICE := chime
