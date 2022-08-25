@@ -48,7 +48,7 @@ mmp.enable.3g2=true
 persist.mm.enable.prefetch=true
 
 # Netflix custom property
-ro.netflix.bsp_rev=Q8250-19134-1
+ro.netflix.bsp_rev=Q6115-31409-1
 
 # Netmgr
 ro.vendor.use_data_netmgrd=true
