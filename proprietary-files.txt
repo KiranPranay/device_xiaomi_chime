@@ -655,6 +655,24 @@ vendor/lib64/libssd.so
 vendor/lib64/libtzdrmgenprov.so
 vendor/lib64/vendor.qti.hardware.qseecom@1.0.so
 
+# DRM - Widevine
+vendor/bin/hw/android.hardware.drm@1.3-service.widevine
+vendor/etc/init/android.hardware.drm@1.3-service.widevine.rc
+-vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.3-service.widevine.xml
+vendor/lib/mediadrm/libwvdrmengine.so
+vendor/lib/libbase64.so
+vendor/lib/libcppf.so
+vendor/lib/libtrustedapploader.so
+vendor/lib64/mediadrm/libwvdrmengine.so
+vendor/lib64/libbase64.so
+vendor/lib64/libminkdescriptor.so
+vendor/lib64/libtrustedapploader.so
+vendor/lib64/libwvhidl.so
+
+# DRM - Widevine L1
+vendor/lib/liboemcrypto.so
+vendor/lib64/liboemcrypto.so
+
 # Embedded Secure Element power manager
 vendor/bin/hw/vendor.qti.esepowermanager@1.1-service
 vendor/etc/init/vendor.qti.esepowermanager@1.1-service.rc
@@ -1561,16 +1579,6 @@ vendor/lib/vendor.qti.hardware.vpp@1.1.so
 vendor/lib/vendor.qti.hardware.vpp@1.2.so
 vendor/lib64/vendor.qti.hardware.vpp@1.1.so
 vendor/lib64/vendor.qti.hardware.vpp@1.2.so
-
-# Widevine DRM
-vendor/bin/hw/android.hardware.drm@1.3-service.widevine
-vendor/etc/init/android.hardware.drm@1.3-service.widevine.rc
--vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.3-service.widevine.xml
-vendor/lib64/mediadrm/libwvdrmengine.so
-vendor/lib64/libminkdescriptor.so
-vendor/lib64/liboemcrypto.so
-vendor/lib64/libtrustedapploader.so
-vendor/lib64/libwvhidl.so
 
 # Wi-Fi
 vendor/bin/cnss-daemon
