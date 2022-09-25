@@ -1,4 +1,5 @@
 # All unpinned blobs below are extracted from miui_LIMEGlobal_V12.5.11.0.RJQMIXM
+# Citrus blobs are imported from miui_CITRUSGlobal_V12.5.9.0.RJFMIXMmiui_CITRUSGlobal_V12.5.9.0.RJFMIXM
 
 # ACDB
 vendor/etc/acdbdata/IDP/bengal-scubaidp-snd-card/IDP_Scuba_Bluetooth_cal.acdb
@@ -280,6 +281,36 @@ vendor/lib64/libwa_refocus.so
 vendor/lib64/libwa_rtdof.so
 vendor/lib64/libwapi_cert.so
 vendor/lib64/libxmi_high_dynamic_range.so
+
+# Camera - Citrus
+vendor/lib64/camera/com.qti.eeprom.citrus_ofilm_ov8856_front_eeprom.so
+vendor/lib64/camera/com.qti.eeprom.citrus_sunny_ov8856_front_eeprom.so
+vendor/lib64/camera/com.qti.sensor.citrus_ofilm_ov8856_front.so
+vendor/lib64/camera/com.qti.sensor.citrus_sunny_hi259_macro.so
+vendor/lib64/camera/com.qti.sensor.citrus_sunny_ov02b1b_depth.so
+vendor/lib64/camera/com.qti.sensor.citrus_sunny_ov8856_front.so
+vendor/lib64/camera/com.qti.sensor.citrus_sunny_s5kgm1sp_main.so
+vendor/lib64/camera/com.qti.sensor.citrus_sunny_s5kgm1st_main.so
+vendor/lib64/camera/com.qti.sensormodule.citrus_ofilm_ov8856_front.bin
+vendor/lib64/camera/com.qti.sensormodule.citrus_ofilm_ov8856g2_front.bin
+vendor/lib64/camera/com.qti.sensormodule.citrus_sunny_hi259_macro.bin
+vendor/lib64/camera/com.qti.sensormodule.citrus_sunny_ov02b1b_depth.bin
+vendor/lib64/camera/com.qti.sensormodule.citrus_sunny_ov8856_front.bin
+vendor/lib64/camera/com.qti.sensormodule.citrus_sunny_ov8856g2_front.bin
+vendor/lib64/camera/com.qti.sensormodule.citrus_sunny_s5kgm1sp_main.bin
+vendor/lib64/camera/com.qti.sensormodule.citrus_sunny_s5kgm1st_main.bin
+vendor/lib64/camera/com.qti.tuned.citrus_ofilm_ov8856_front.bin
+vendor/lib64/camera/com.qti.tuned.citrus_sunny_hi259_macro.bin
+vendor/lib64/camera/com.qti.tuned.citrus_sunny_hi259_macro_india.bin
+vendor/lib64/camera/com.qti.tuned.citrus_sunny_ov02b1b_depth.bin
+vendor/lib64/camera/com.qti.tuned.citrus_sunny_ov02b1b_depth_india.bin
+vendor/lib64/camera/com.qti.tuned.citrus_sunny_ov8856_front.bin
+vendor/lib64/camera/com.qti.tuned.citrus_sunny_ov8856_front_global.bin
+vendor/lib64/camera/com.qti.tuned.citrus_sunny_ov8856_front_india.bin
+vendor/lib64/camera/com.qti.tuned.citrus_sunny_s5kgm1sp_main.bin
+vendor/lib64/camera/com.qti.tuned.citrus_sunny_s5kgm1sp_main_india.bin
+vendor/lib64/camera/com.qti.tuned.citrus_sunny_s5kgm1st_main.bin
+vendor/lib64/camera/com.qti.tuned.citrus_sunny_s5kgm1st_main_india.bin
 
 # Camera Arcsoft
 vendor/lib64/libarcsoft_beautyshot.so
