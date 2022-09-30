@@ -201,9 +201,15 @@ on charger
     start vendor.power_off_alarm
     setprop vendor.usb.controller 4e00000.dwc3
     setprop sys.usb.configfs 1
-#jiangxueqin start mi_thermald
+    wait /sys/class/power_supply/battery/temp
     start mi_thermald
-    service mi_thermald /system/vendor/bin/mi_thermald
+
+on boot
+    wait /sys/class/power_supply/battery/temp
+    start mi_thermald
+
+#mi_thermald
+service mi_thermald /system/vendor/bin/mi_thermald
     class main
     user root
     group system
